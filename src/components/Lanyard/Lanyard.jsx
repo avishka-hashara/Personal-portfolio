@@ -10,6 +10,8 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 const cardGLB = "/portofolio/assets/card.glb";
 const lanyard = "/portofolio/assets/lanyard.png";
 
+const myNewCardImage = "/portofolio/assets/my-new-card.png";
+
 import * as THREE from 'three';
 import './Lanyard.css';
 
@@ -43,6 +45,14 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
+
+  const myCardTexture = useTexture(myNewCardImage);
+  myCardTexture.flipY = false;
+
+  myCardTexture.wrapS = myCardTexture.wrapT = THREE.ClampToEdgeWrapping;
+
+  myCardTexture.offset.set(0.08, 0.1);
+  myCardTexture.repeat.set(1.7, 1);
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
@@ -123,7 +133,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
             <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.9} metalness={0.8} />
+              <meshPhysicalMaterial map={myCardTexture} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.9} metalness={0.8} />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />

@@ -75,14 +75,14 @@ function App() {
         <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
           <div className="animate__animated animate__fadeInUp animate__delay-3s">
             <div className="flex items-center gap-3 mb-6 bg bg-zinc-800 w-fit p-4 rounded-2xl">
-              <img src="./assets/faris1.png" className="w-10 rounded-md" />
+              <img src="./assets/avishka1.png" className="w-10 rounded-md" />
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <ShinyText text="Hi I'm Faris Edrik Prayoga" disabled={false} speed={3} className='custom-class' />
+              <ShinyText text="Hi I'm Avishka Hashara" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
-              text="A passionate application and web developer dedicated to crafting modern, high-performance digital experiences through innovative and user-friendly solutions."
+              text="A passionate machine learning enthusiast dedicated to crafting modern, high-performance digital experiences through innovative and user-friendly solutions."
               delay={150}
               animateBy="words"
               direction="top"
@@ -105,12 +105,12 @@ function App() {
           </div>
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
-              name="Faris Edrik P"
-              title="Web Developer"
-              handle="farisedrikp"
+              name="Avishka Hashara"
+              title="ML Enthuasist "
+              handle="avishka"
               status="Online"
               contactText="Contact Me"
-              avatarUrl="./assets/faris.png"
+              avatarUrl="./assets/avishka.png"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
@@ -129,7 +129,7 @@ function App() {
                 </h2>
 
                 <BlurText
-                  text="I’m Faris Edrik Prayoga, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
+                  text="I’m Avishka Hashara, a ML enthusiast passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 10 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
                   delay={150}
                   animateBy="words"
                   direction="top"
@@ -139,22 +139,17 @@ function App() {
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      20<span className="text-violet-500">+</span>
+                      10<span className="text-violet-500">+</span>
                     </h1>
                     <p>Project Finished</p>
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      3<span className="text-violet-500">+</span>
+                      1<span className="text-violet-500">+</span>
                     </h1>
                     <p>Years of Experience</p>
                   </div>
-                  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
-                    <h1 className="text-3xl md:text-4xl mb-1">
-                      3.81<span className="text-violet-500">/4.00</span>
-                    </h1>
-                    <p>GPA</p>
-                  </div>
+    
                 </div>
 
 
@@ -256,7 +251,7 @@ function App() {
             {/* Contact Form di kanan */}
             <div className="flex-1">
               <form
-                action="https://formsubmit.co/rissoppa21@gmail.com"
+                action="https://formsubmit.co/eaahashara01@gmail.com"
                 method="POST"
                 className="bg-zinc-800 p-10 w-full rounded-md"
                 autoComplete="off"
